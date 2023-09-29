@@ -32,10 +32,8 @@ namespace csharp;
         {
             item.SellIn--;
             item.Quality += qualityChange;
-
             if (item.SellIn < 0)
                 item.Quality += qualityChange;
-            
             item.Quality = Math.Max(MINIMUM_QUALITY, Math.Min(item.Quality, MAXIMUM_QUALITY));
         }
         private static void DoForBackStagePass(Item item)
